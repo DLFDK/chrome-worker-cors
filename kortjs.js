@@ -53,8 +53,8 @@ export default class kortjs extends HTMLElement {
 
         const painter = (() => {
             const tilesBeingFetched = new Set();
-            // const worker = new Worker(URL.createObjectURL(new Blob([`(${workerFunction.toString()})()`], { type: 'text/javascript' })));
-            const worker = new Worker("kortjs-worker.js");
+            const worker = new Worker(URL.createObjectURL(new Blob([`(${workerFunction.toString()})()`], { type: 'text/javascript' })));
+            // const worker = new Worker("kortjs-worker.js");
             worker.onmessage = workerMessage;
 
             function paint(layer, tileX, tileY, gridLengthX, gridLengthY) {
