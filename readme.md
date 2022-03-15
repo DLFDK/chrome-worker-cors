@@ -1,0 +1,1 @@
+https://chrome-worker-cors.netlify.app/
