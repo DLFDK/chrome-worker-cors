@@ -5,6 +5,9 @@ fetch("https://tile.openstreetmap.org/0/0/0.png").catch(error => {
 
 const externalWorker = new Worker("worker.js");
 
+const request = new Request("https://tile.openstreetmap.org/0/0/0.png");
+console.log(request);
+
 const inlineWorker = new Worker(URL.createObjectURL(new Blob([`(${workerFunction.toString()})()`], { type: 'text/javascript' })));
 
 function workerFunction() {
