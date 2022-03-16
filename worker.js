@@ -1,1 +1,1 @@
-fetch("https://tile.openstreetmap.org/0/0/0.png");
+fetch("https://jsonplaceholder.typicode.com/posts/1");
